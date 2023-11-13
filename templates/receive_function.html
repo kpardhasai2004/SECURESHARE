@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Enter Access Code</h2>
+  <form method="post">
+    {% csrf_token %}
+    <label for="access_code">Access Code:</label>
+    <input type="text" name="access_code" required>
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2 style="text-align: center; margin-bottom: 20px;">Upload a File</h2>
+
+  <form method="post" enctype="multipart/form-data" style="max-width: 400px; margin: 0 auto;">
+    {% csrf_token %}
+
+    <div style="margin-bottom: 15px;">
+      <label for="title" style="display: block; margin-bottom: 5px; font-weight: bold;">Title:</label>
+      <input type="text" name="title" style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label for="file" style="display: block; margin-bottom: 5px; font-weight: bold;">Choose a File:</label>
+      <input type="file" name="file" style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+
+    <button type="submit" style="background-color: #3498db; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Upload</button>
+  </form>
+{% endblock %}

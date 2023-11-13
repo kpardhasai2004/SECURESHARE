@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Shareable Link for {{ file.title }}</h2>
+  <p>Your access code is: {{ file.access_code }}</p>
+  <p>Share this link with others to provide access:</p>
+  <p><a href="{{ file.file.url }}" target="_blank">Download File</a></p>
+{% endblock %}
